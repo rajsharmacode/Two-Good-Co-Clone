@@ -4,12 +4,10 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 html,
 body {
     height: 100%;
     width: 100%;
-    scroll-behavior: smooth;
 }
 *::selection{
     background-color: black;
@@ -22,21 +20,45 @@ body {
     position: relative;
     min-height: 100vh;
     width: 100%;
-    /* background-color: blanchedalmond; */
-
 }
-
-
-
 #logosvg{
     height: 100px;
     width: 100px;
-    /* background-color: blue; */
     position: relative;
     top: 100px;
 }
+#blcursor{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(251, 224, 189);
+    border-radius: 50%;
+    scale: 0;
+    position: fixed;
+    z-index: -99;
+    /* transform: translate(-50%,-50%); */
+}
 
-
+#navicon{
+    height: 85px; 
+    /* background-color: blue; */
+    position: fixed;
+    z-index: 99;
+    /* top: -80px; */
+    overflow: hidden;
+}
+#subnavicon{
+    /* background-color: blueviolet; */
+    position: relative;
+}
+#svg1{
+   height: 83px;
+   width: 106px;
+}
+#svg2{
+    height: 50px;
+    width: 70px;
+    /* position: fixed; */
+}
   /*##################################               Navigation Bar */
 
 .twcfont{
@@ -45,12 +67,13 @@ body {
     text-align: start;
     font-weight: 900;
     line-height: 28px;
+    
 }
 #navbar {
     height: min-content;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     text-align: center;
     /* background-color: bisque; */
 }
@@ -58,24 +81,16 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 3vw;
+    color: gray;
     text-align: center;
 }
 
    /*#####################          change the course title */
 
 .titlefont {
-    /* width: 100%;
-    font-family: futura;
-    text-transform: uppercase;
-    font-size: calc((100vw - 48px) * 0.1695);;
-    line-height: 13vw; */
-
-
-    /* margin-top: 90px; */
     text-transform: uppercase;
     width: 100%;
     grid-column: 1 / -1;
-    /* background-color: aquamarine; */
     font-size: calc((100vw - 100px) * 0.1695);
     letter-spacing: -0.05em;
     line-height: 0.85em;
@@ -83,11 +98,12 @@ body {
     opacity: 1;
     font-family: futura;
     margin-bottom: 0px;
+    position: relative;
 }
 
 #rootvideo {
     margin-top: 7vmin;
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     background-color: bisque;
     object-fit: cover;
@@ -101,7 +117,7 @@ body {
     position: absolute;
     cursor: pointer;
     background-color: transparent;
-    z-index: 16;
+    z-index: 99;
 }
 
 #video1 {
@@ -114,8 +130,8 @@ body {
 }
 
 #playpointer {
-    height: 100px;
-    width: 100px;
+    height: 130px;
+    width: 130px;
     text-transform: uppercase;
     background-color: black;
     position: fixed;
@@ -135,49 +151,136 @@ body {
 
        /* #######################         category image  secrtion */
 
-#page2{
-    height: 110vh;
 
+#divider{
+    height: 10vmin;
     width: 100%;
+    display: flex;
     margin-top: 10vmin;
+    flex-direction: column;
+}
+#goodfont {
     display: flex;
     justify-content: space-between;
+}
+#goodfont p{
+    font-size: .9rem;
+    /* letter-spacing: -1px; */
+    text-transform: uppercase;
+    color: gray;
+}
+#line{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    /* background-color: aqua; */
+    justify-content: space-between;
     align-items: center;
-    /* background-color: aquamarine; */
-    /* position: relative; */
 }
     
 .frame{
     height: 100%;
     width: 32%;
-    /* margin: 2vmin; */
-    /* row-gap: 20px; */
-    /* padding: 20px; */
-    border: 1px solid black;
-    background-color: blue; 
-    /* margin-top: 8vw; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-#frame-1{
-    background-image: url(https://cdn.sanity.io/images/w8f1ak3c/production/9032e317a6741221ae543fdae5d05160819f9a44-1500x2250.jpg/DSC0079_Dexter%20Kim.jpg?rect=0,0,1500,2008&fp-x=0.47794117647058826&fp-y=0.4461323529411765&w=1024&h=1707&fit=crop&crop=focalpoint&auto=format);
-    object-fit: scale-down;
+.frame img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
     box-sizing: border-box;
     background-position: center;
 
 }
-#frame-2{
-    background-image: url(https://cdn.sanity.io/images/w8f1ak3c/production/138e191deead80c5c8e9a982c20987f8f83c1f27-5504x8256.jpg/JTG_2919%20copy.jpg?rect=276,0,4953,8256&w=1024&h=1707&fit=min&auto=format);
-    object-fit: scale-down;
-    box-sizing: border-box;
-    background-position: center;
-
+.smlbox{
+    
+    height: 37px;
+    width: 200px;
+    border-radius: 20px;
+    position: absolute;
+    background-color: bisque;
+    /* padding: 5px; */
+    z-index: 11;    
+    top: 50%;
+    padding-bottom: 10px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
 }
-#frame-3{
-    background-image: url(https://cdn.sanity.io/images/w8f1ak3c/production/d3151106849ff2494d66916cf554c68a0603444d-902x1500.png/Rectangle%20220.png?rect=1,0,900,1500&w=640&h=1067&fit=min&auto=format);
-    object-fit: scale-down;
-    box-sizing: border-box;
-    background-position: center;
 
+.smlbox .upper{
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
 }
+.smlbox .lower{
+    width: 100%;
+    height:100%;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.smlbox .lower .sublower{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.smlbox .lower .sublower .imgg{
+    padding: 10px;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+ 
+.smlbox .lower .sublower .imgg img{
+    width: 70%;
+    height: 70%;
+} 
+.smlbox .lower .sublower .fontt{
+    width: 100%;
+    height: 30%;
+    opacity: 1; 
+    padding: .4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.smlbox .el1{
+    font-size: .4rem;
+}
+.smlbox .el2{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.smlbox .el3{
+    text-transform: uppercase;
+}
+.smlbox .el4{
+    font-size: .7rem;
+}
+
 
 /* #####################################             paragraph and page 3 section */
 
@@ -188,23 +291,18 @@ body {
     justify-content: space-between;
     height: 300px;
     width: 100%;
-    /* border: 1px solid black; */
-    /* background-color: blanchedalmond; */
-    /* position: relative; */
-    /* top: 100px; */
 }
 #title-1{
     font-weight: 900;
     font-family: futura;
     display: flex;
     width: 70%;
-    /* background-color: blue; */
     text-align: start;
     justify-content: center;
     align-items: start;
-    /* white-space: nowrap; */
-    padding: 0 .9rem 2rem .1rem;
-    font-size: calc((30vw - 100px) * 0.1695);;
+    /* padding: 0 .9rem 2rem .1rem; */
+    /* padding:20px; */
+    font-size: calc((25vw - 100px) * 0.1695);
 }
 #title-2{
     width: 70%;
@@ -215,18 +313,18 @@ body {
     flex-direction: column;
     align-items: start;
     font-weight: 100;
-    gap: 10px;
-
-    padding: 0 7rem 7rem 7rem;
+    /* gap: 10px; */
+    /* gap: -10px; */
+    padding: 0 7rem 7rem 15vmin;
     font-size: 2vmin;
 }
 
  /* ###############################                       Page 4 Product image name */
+
 #page4{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    /* background-color: rgb(127, 255, 187); */
     justify-content: center;
     align-items: center;
 }
@@ -234,17 +332,14 @@ body {
 .productbox {
     width: 50%;
     height: min-content;
-    /* border: 1px solid black; */
 }
 .productbox img{
     width: 100%;
-    /* border: 1px solid black; */
 }
 .productbox h3{
     width: 100%;
     text-align: center;
     font-weight: 100;
-    /* border: 1px solid black; */
 }
 
   /* #############################               Page 5 sec1  sec2 sec 3 */
@@ -261,12 +356,10 @@ body {
     width: 100%;
     height: 30%;
     display: flex;
-    /* background-color: aqua; */
     justify-content: space-between;
 }
 .pt1{
     font-size: 1rem;
-    /* letter-spacing: 2px; */
 }
 .ch1{
     font-weight: 300;
@@ -275,6 +368,7 @@ body {
     font-weight: 100;
     font-size:  1rem;
     margin-bottom: 10px;
+    color: gray;
 }
 #hed1{
     text-align: start;
@@ -282,24 +376,27 @@ body {
 #part3{
     text-align: right;
 }
-#part2 img{
-    width: 20vmin;
+#part2 svg{
+        /* font-size: 200vmin; */
+    /* height: 200vmin; */
+    width: 140px;
+    height: 175px;
+    /* background-color: blue; */
+    position: relative;
+    top: 50%;
 }
-
-
 #sec2{
     display: flex;
     gap: 5vw;
     font-size: 1rem;
     justify-content: center;
-    /* background-color: bisque; */
     padding-top: 2%;
     font-weight: 10;
-    padding-bottom: 13%;
+    padding-bottom: 8%;
+    color: gray;
 }
 #sec3{
     width: 100%;
-    /* background-color: blue; */
     text-align: center;
     padding: 2% 20% 3% 20%;
     font-weight: 10;
