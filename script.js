@@ -95,7 +95,7 @@ gsap.from(subnavicon,{
     }
 
 })
-let part2svg=document.querySelector("#part2 svg")
+let part2svg=document.querySelector("#part2 svg");
 gsap.from(part2svg,{
     opacity:0,
     duration:1,
