@@ -569,6 +569,24 @@ body {
         position: relative;
         /* background-color: blue; */
     }
+    /* #videooverlap {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        cursor: pointer;
+        background-color: transparent;
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+    /* #playpointer {
+        
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+        z-index: 9;
+    } */
     /* #playpointer {
         height: 120px;
         width: 120px;
