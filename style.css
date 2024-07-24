@@ -142,8 +142,8 @@ body {
 }
 
 #playpointer {
-    height: 130px;
-    width: 130px;
+    height: 120px;
+    width: 120px;
     text-transform: uppercase;
     background-color: black;
     position: fixed;
@@ -157,6 +157,7 @@ body {
     letter-spacing: 3px;
     opacity: 0;
     scale: 0;
+    transform: translate(-50%,-50%);
     z-index: 9;
 }
 
@@ -568,12 +569,12 @@ body {
         position: relative;
         /* background-color: blue; */
     }
-    #playpointer {
+    /* #playpointer {
         height: 120px;
         width: 120px;
         text-transform: uppercase;
         background-color: black;
-        /* position: fixed; */
+        position: fixed;#####################
         color: white;
         justify-content: center;
         align-items: center;
@@ -588,7 +589,7 @@ body {
         transform: translate(-50%,-50%);
         position: absolute;
         z-index: 9;
-    }
+    } */
 
     #divider {
         height: 10vmin;
@@ -610,7 +611,7 @@ body {
     }
 
     .main {
-        margin: 2vw 3vw 0vw 3vw;
+        margin: 2vw 3vw 20px 3vw;
     }
 
     .frame {
@@ -769,10 +770,11 @@ body {
         /* width: 100%; */
         /* text-align: center; */
         /* padding: 2% 20% 3% 20%; */
-        font-weight: 10;
+        font-weight: 200;
         width: 100%;
-        padding: 0;
+        padding: 0 0 20px 0 ;
         text-align: left;
+        color: black;
         /* text-indent: 1px; */
         /* text-decoration: overline; */
         /* display: flex;
@@ -781,7 +783,7 @@ body {
     #part2 svg {
         /* font-size: 200vmin; */
         /* height: 200vmin; */
-        width: 40px;
+        width: 90px;
         height: 175px;
         /* background-color: blue; */
         position: relative;

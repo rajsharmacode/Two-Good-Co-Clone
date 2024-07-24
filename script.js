@@ -1,3 +1,29 @@
+// const locoScroll = new LocomotiveScroll({
+//     el: document.querySelector("#man"),
+//     smooth: true
+// });
+
+// locoScroll.on("scroll", ScrollTrigger.update);
+
+// ScrollTrigger.scrollerProxy("#scroll-container", {
+//     scrollTop(value) {
+//         return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+//     },
+//     getBoundingClientRect() {
+//         return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+//     }
+// });
+
+// ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+// ScrollTrigger.refresh();
+
+
+
+
+
+
+
+
 function videoplaypointer(){
 let video1 = document.querySelector("#video1");
 let playpointer = document.querySelector("#playpointer");
@@ -100,7 +126,7 @@ gsap.from(part2svg,{
     opacity:0,
     duration:1,
     delay:1,
-    scale:2,
+    scale:4,
     scrollTrigger:{
         trigger:part2svg,
         scroller:"body",
