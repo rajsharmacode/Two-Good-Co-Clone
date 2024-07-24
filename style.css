@@ -440,9 +440,6 @@ body {
 }
 
 @media (max-width: 2000px) {
-    body {
-        /* background-color: aqua; */
-    }
 
     #title-1 {
         font-weight: 900;
@@ -486,9 +483,6 @@ body {
 }
 
 @media (max-width: 1024px) {
-    body {
-        /* background-color: yellow; */
-    }
 
     #title-1 {
         font-weight: 900;
@@ -534,9 +528,6 @@ body {
 
 
 @media (max-width: 700px) {
-    body {
-        /* background-color: rgba(181, 206, 199, 0.695); */
-    }
 
     #logosvg {
         height: 100px;
@@ -688,6 +679,7 @@ body {
         font-size: .5rem;
         text-align: center;
         font-weight: 100;
+        color: black;
     }
 
     #page5 {
@@ -759,6 +751,7 @@ body {
         font-weight: 10;
         width: 100%;
         padding: 0;
+        text-align: left;
         /* text-indent: 1px; */
         /* text-decoration: overline; */
         /* display: flex;
@@ -782,5 +775,6 @@ body {
     }
     .pt1 {
         font-size: .7rem;
+        color: black;
     }
 }
